@@ -14,8 +14,12 @@
 const fetchCard = async ()=> {
     const response = await fetch("https://api.pokemontcg.io/v2/cards")
     const data = await response.json()
-    console.log(data)
-    
+    // console.log(data)
+    const redImagePost = document.createElement("img")
+    redImagePost.src = data.data[Math.floor(Math.random())].images.large
+    document.body.append(redImagePost)
+    // let redImage = data.data[Math.floor(Math.random())].images.large
+    // console.log(redImage)
 }
 
 fetchCard()
