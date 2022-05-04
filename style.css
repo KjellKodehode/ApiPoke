@@ -6,9 +6,10 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: black;
     font-family: 'Bangers', cursive;
     margin: 0 auto;
+    min-width: 505px;
 }
 
 h1{
@@ -16,6 +17,10 @@ h1{
 }
 
 :root{
+    /* https://colordesigner.io/#0B2631-18445D-1F7799-04C4D9-79E6F2 */
+    --aqua: #79E6F2;
+    --aqua01: #58e0ef;
+    --aqua02: #0d7984;
     /* ----- BUTTON COLORS ----- */
     /* https://colordesigner.io/#00305A-004B8D-0074D9-4192D9-7ABAF2 */
     --blue: #0074D9;
@@ -35,7 +40,7 @@ h1{
 
 /* HEADER */
 header{
-    background-color: aqua;
+    background-color: var(--aqua);
     background-image: url("images/001.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -51,14 +56,68 @@ header{
     opacity: 100%;
 }
 
+/* Pokemon at top page */
 #logoPoke{
+    animation: pokeS 0.1s infinite;
     height: 200px;
     margin-left: 55px;
     opacity: 85%;
     width: 200px;
 }
 
+@keyframes pokeS{
+    0% {
+        transform: skewX(0deg);
+    }
+    25%{
+        transform: skewX(1deg);
+    }
+    50% {
+        transform: skewX(0deg);
+    }
+    75%{
+        transform: skewX(-1deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+}
+
+#logoPoke:hover{
+    animation: pokeL 0.1s infinite;
+    cursor: not-allowed;
+}
+
+@keyframes pokeL{
+    0% {
+        transform: skewX(0deg);
+    }
+    25%{
+        transform: skewX(10deg);
+    }
+    50% {
+        transform: skewX(0deg);
+    }
+    75%{
+        transform: skewX(-10deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+}
+
+/* #logoPoke:active{
+    transform:scale(1.5);
+} */
+
 /* buttons */
+#s-btn{
+    background-color: var(--aqua01);
+    border-top: 2px solid var(--yellow);
+    border-bottom: 1px solid var(--blue);
+    padding: 20px 0 25px 0 ;
+}
+
 .head-btn{
     display: flex;
     justify-content: center;
@@ -105,6 +164,35 @@ button:active{
 .textRed{
     color: var(--red);
     font-weight: 700;
+}
+
+/* Cards */
+#s-cards{
+    background-color: var(--aqua02);
+    display: flex;
+    justify-content: center;
+    padding: 0 0 38px 0;
+}
+
+#blueCard{
+    margin-right: 50px;
+    margin-top: 40px;
+    max-height: 600px;
+    max-width: 200px;
+}
+
+#blueCard:hover{
+    transform: scale(1.2);
+}
+
+#redCard{
+    margin-top: 40px;
+    max-height: 600px;
+    max-width: 200px;
+}
+
+#redCard:hover{
+    transform: scale(1.2);
 }
 
 /* media */

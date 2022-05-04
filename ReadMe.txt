@@ -1,4 +1,4 @@
-IMAGES:
+IMAGES: (may be edited)
 
 International_Pokémon_logo.svg
 https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg
@@ -9,8 +9,8 @@ https://unsplash.com/photos/VlZYu3nZIRI
 pokemon-6.png
 https://pixabay.com/illustrations/pokemon-pokemon-go-dragon-6895600/
 
-
-
+card_back.png
+https://unsplash.com/photos/DLeImMwOVyc
 
 
 
