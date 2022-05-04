@@ -142,8 +142,7 @@ button:hover{
     transform: scale(1.05)
 }
 
-button:active{
-    
+button:active{ 
     border: 3px solid var(--yellow);
     color: var(--white);
 }
@@ -175,10 +174,15 @@ button:active{
 }
 
 #blueCard{
+    cursor: pointer;
     margin-right: 50px;
     margin-top: 40px;
     max-height: 600px;
     max-width: 200px;
+}
+
+#redCard{
+    cursor: pointer;
 }
 
 #blueCard:hover{
