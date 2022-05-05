@@ -1,25 +1,33 @@
-// const fetchPoke = async ()=> {
-//     const response = await fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-//     const data = await response.json()
-//     const imgFront = document.createElement("img")
-//     imgFront.src = data.sprites.front_default
-//     document.body.append(imgFront)
-//     const imgBack = document.createElement("img")
-//     imgBack.src = data.sprites.back_default
-//     document.body.append(imgBack)
-// }
+// async function to load the data
+async function fetchData() {
 
-// fetchPoke()
-
-const fetchCard = async ()=> {
-    const response = await fetch("https://api.pokemontcg.io/v2/cards")
+    console.log("loading data...")
+    let loading = document.createElement("h3")
+    loading.classList.add("loading")
+    loading.innerHTML = "loading data..."
+    document.body.append(loading)
+    const response = await fetch("https://api.pokemontcg.io/v2/cards")   
     const data = await response.json()
-    // console.log(data)
-    const redImagePost = document.createElement("img")
-    redImagePost.src = data.data[Math.floor(Math.random())].images.large
-    document.body.append(redImagePost)
-    // let redImage = data.data[Math.floor(Math.random())].images.large
-    // console.log(redImage)
+    console.log(data)
+    loading.remove()
+    console.log("data loaded")
+  
+    function getBlueCard(){
+        const blueCardPost = document.createElement("img")
+        blueCardPost.src = data.data[Math.floor(Math.random() * 251)].images.small
+        // document.getElementById("cardBlue").removeChild(blueCardPost)
+        document.getElementById("cardBlue").appendChild(blueCardPost)
+    }
+    document.getElementById("btn-blue").addEventListener("click",getBlueCard )
+
+    function getRedCard(){
+        const redCardPost = document.createElement("img")
+        redCardPost.src = data.data[Math.floor(Math.random() * 251)].images.small
+        // document.getElementById("cardRed").removeChild(redCardPost)
+        document.getElementById("cardRed").appendChild(redCardPost)
+    }
+    document.getElementById("btn-red").addEventListener("click",getRedCard )
+
 }
 
-fetchCard()
+fetchData()
