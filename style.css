@@ -52,7 +52,7 @@ header{
     background-size: cover;
     display: grid;
     justify-content: center;
-    height:265px;
+    height:245px;
     opacity: 85%;
     text-align: center;
 }
@@ -64,7 +64,7 @@ header{
 /* Pokemon at top page */
 #logoPoke{
     animation: pokeS 0.1s infinite;
-    height: 200px;
+    height: 180px;
     margin-left: 55px;
     opacity: 85%;
     width: 200px;
