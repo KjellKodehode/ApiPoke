@@ -111,10 +111,6 @@ header{
     }
 }
 
-/* #logoPoke:active{
-    transform:scale(1.5);
-} */
-
 /* buttons */
 #s-btn{
     background-color: var(--aqua01);
@@ -206,8 +202,6 @@ button:active{
 }
 
 #blueCard{
-    /* border: 1px solid black; */
-    /* background-image: url("images/card_back.png"); */
     cursor: pointer;
     margin-right: 50px;
     margin-top: 40px;
@@ -218,31 +212,11 @@ button:active{
 #cardBlue{
     object-fit: cover;
 }
-    
-/* #blueCard:hover{
-    transform: scale(1.2);
-}
-
-#redCard{
-    cursor: pointer;
-}
-
-
-#redCard{
-    margin-top: 40px;
-    max-height: 600px;
-    max-width: 200px;
-}
-
-#redCard:hover{
-    transform: scale(1.2);
-} */
 
 .contCardBlue{
     background-image: url("images/card_back.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /* border: 1px solid blue; */
     height: 342px;
     margin-right: 20px;
     margin-top: 20px;
@@ -258,7 +232,6 @@ button:active{
     background-image: url("images/card_back.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /* border: 1px solid red; */
     height: 342px;
     margin-top: 20px;
     width: 245px;
