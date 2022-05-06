@@ -15,12 +15,12 @@ async function fetchData() {
     function getBlueCard(){
         const blueCardPost = document.createElement("img")
         blueCardPost.src = data.data[Math.floor(Math.random() * 251)].images.small
-        if(!blueCardPost.url){
-            console.log("is")
-            // document.getElementById("cardBlue").removeChild(blueCardPost)
-        }else{
-            console.log("not")
-        }
+        // if(!blueCardPost.url){
+        //     console.log("is")
+        //     // document.getElementById("cardBlue").removeChild(blueCardPost)
+        // }else{
+        //     console.log("not")
+        // }
         // document.getElementById("cardBlue").removeChild(blueCardPost)
         document.getElementById("cardBlue").appendChild(blueCardPost)
     }
